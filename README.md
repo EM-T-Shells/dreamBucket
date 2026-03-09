@@ -21,12 +21,12 @@ The goal is a zero-effort photo organization experience where the user never has
 Want to keep going with the edge function or set up the React Native project first?
 ## Project Structure
 ```
-dream-bucket/
-├── src/
+snapbucket/
+├── app/
 │   ├── assets/
-│   ├── index.html
-│   ├── script.js
-│   └── style.css
+│   ├── components/
+│   ├── screens/
+│   └── app.tsx
 ├── supabase/
 │   └── functions/
 │       └── categorize-image/
@@ -36,20 +36,18 @@ dream-bucket/
 └── LICENSE
 ```
 
+
 ## Setup
 1. Clone the repo
-2. Create a [Supabase](https://supabase.com) project and grab your project URL and service key
-3. Enable the [Google Cloud Vision API](https://console.cloud.google.com) and grab your API key
-4. Add your keys to `.env`:
-```
-SUPABASE_URL=your_supabase_url
-SUPABASE_KEY=your_supabase_service_key
-CLOUDVISION_API_KEY=your_google_vision_key
-```
-5. Deploy the edge function:
-```
-npx supabase functions deploy categorize-image
-```
+2. Install [Expo CLI](https://expo.dev): `npm install -g expo-cli`
+3. Install dependencies: `npm install`
+4. Create a [Supabase](https://supabase.com) project and grab your project URL and service key
+5. Enable the [Google Cloud Vision API](https://console.cloud.google.com) and grab your API key
+6. Create an [Anthropic](https://anthropic.com) account and grab your API key
+7. Add your keys to `.env`:
+8. Deploy the edge function: `npx supabase functions deploy categorize-image`
+9. Run the app: `npx expo start`
+      
 
 ## Status
 🚧 In progress 
